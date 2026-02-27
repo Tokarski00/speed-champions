@@ -34,3 +34,10 @@ main{ max-width:900px; margin:0 auto; display:grid; gap:10px; }
 .card label{ cursor:pointer; width:100%; }
 .card small{ display:block; opacity:.75; margin-top:2px; }
 .card input{ transform: scale(1.25); }
+
+.car-img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
