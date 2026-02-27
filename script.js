@@ -1,62 +1,62 @@
 // ====== USTAWIENIA ======
-const STORAGE_KEY = "speed-champions-owned-v2";
 const PLACEHOLDER_IMG = "images/placeholder.jpg";
 
-// Jeśli nie masz jeszcze wszystkich zdjęć, zostaw placeholdery.
-// Docelowo podmienisz img na prawdziwe pliki w folderze /images.
-const cars = [
-  { name: "Acura NSX GT3", img: "images/acura-nsx-gt3.jpg" },
-  { name: "Aston Martin Valkyrie AMR Pro", img: "images/aston-martin-valkyrie-amr-pro.jpg" },
-  { name: "Aston Martin Vantage GT3", img: "images/aston-martin-vantage-gt3.jpg" },
-  { name: "Audi S1 E-tron Quattro", img: "images/audi-s1-e-tron-quattro.jpg" },
-  { name: "Audi R8 LMS GT3", img: "images/audi-r8-lms-gt3.jpg" },
-  { name: "Audi R18 e-tron quattro", img: "images/audi-r18-e-tron-quattro.jpg" },
-  { name: "BMW M4 GT3", img: "images/bmw-m4-gt3.jpg" },
-  { name: "BMW M Hybrid V8", img: "images/bmw-m-hybrid-v8.jpg" },
-  { name: "Bugatti Chiron", img: "images/bugatti-chiron.jpg" },
-  { name: "Bugatti Bolide", img: "images/bugatti-bolide.jpg" },
-  { name: "Chevrolet Camaro ZL1", img: "images/chevrolet-camaro-zl1.jpg" },
-  { name: "Chevrolet Corvette C8.R", img: "images/chevrolet-corvette-c8r.jpg" },
-  { name: "Dodge Challenger SRT Demon", img: "images/dodge-challenger-srt-demon.jpg" },
-  { name: "Dodge Charger R/T 1970", img: "images/dodge-charger-rt-1970.jpg" },
-  { name: "Ferrari 488 GT3", img: "images/ferrari-488-gt3.jpg" },
-  { name: "Ferrari 512 M", img: "images/ferrari-512-m.jpg" },
-  { name: "Ferrari F8 Tributo", img: "images/ferrari-f8-tributo.jpg" },
-  { name: "Ferrari 812 Competizione", img: "images/ferrari-812-competizione.jpg" },
-  { name: "Ferrari 296 GTB", img: "images/ferrari-296-gtb.jpg" },
-  { name: "Ferrari SF90 Stradale", img: "images/ferrari-sf90-stradale.jpg" },
-  { name: "Ferrari F40 Competizione", img: "images/ferrari-f40-competizione.jpg" },
-  { name: "Ford GT", img: "images/ford-gt.jpg" },
-  { name: "Ford Mustang Fastback 1968", img: "images/ford-mustang-fastback-1968.jpg" },
-  { name: "Ford Mustang Shelby GT500", img: "images/ford-mustang-shelby-gt500.jpg" },
-  { name: "Ford Bronco R", img: "images/ford-bronco-r.jpg" },
-  { name: "Hyundai IONIQ 5 N", img: "images/hyundai-ioniq-5-n.jpg" },
-  { name: "Jaguar I-PACE eTROPHY", img: "images/jaguar-i-pace-etrophy.jpg" },
-  { name: "Koenigsegg Jesko", img: "images/koenigsegg-jesko.jpg" },
-  { name: "Lamborghini Huracán Super Trofeo EVO", img: "images/lamborghini-huracan-super-trofeo-evo.jpg" },
-  { name: "Lamborghini Countach", img: "images/lamborghini-countach.jpg" },
-  { name: "Lamborghini Sián FKP 37", img: "images/lamborghini-sian-fkp-37.jpg" },
-  { name: "Lamborghini Lambo V12 Vision GT", img: "images/lamborghini-v12-vision-gt.jpg" },
-  { name: "Lotus Evija", img: "images/lotus-evija.jpg" },
-  { name: "McLaren Senna", img: "images/mclaren-senna.jpg" },
-  { name: "McLaren Elva", img: "images/mclaren-elva.jpg" },
-  { name: "McLaren Solus GT", img: "images/mclaren-solus-gt.jpg" },
-  { name: "Mercedes-AMG GT3", img: "images/mercedes-amg-gt3.jpg" },
-  { name: "Mercedes-AMG F1 W12 E Performance", img: "images/mercedes-amg-f1-w12.jpg" },
-  { name: "Mercedes-AMG Project One", img: "images/mercedes-amg-project-one.jpg" },
-  { name: "Mitsubishi Lancer Evolution IX", img: "images/mitsubishi-lancer-evo-ix.jpg" },
-  { name: "Nissan GT-R NISMO", img: "images/nissan-gtr-nismo.jpg" },
-  { name: "Nissan Skyline GT-R (R34)", img: "images/nissan-skyline-r34.jpg" },
-  { name: "Pagani Utopia", img: "images/pagani-utopia.jpg" },
-  { name: "Peugeot 9X8", img: "images/peugeot-9x8.jpg" },
-  { name: "Porsche 911 RSR", img: "images/porsche-911-rsr.jpg" },
-  { name: "Porsche 963", img: "images/porsche-963.jpg" },
-  { name: "Toyota GR Supra", img: "images/toyota-gr-supra.jpg" },
-  { name: "Toyota GR86", img: "images/toyota-gr86.jpg" },
-  { name: "Volkswagen Golf GTI", img: "images/volkswagen-golf-gti.jpg" }
-];
+// Dwie listy (tu na start daję img jako placeholder).
+// Jak wrzucisz zdjęcia do /images, podmieniasz img na np. "images/bugatti-chiron.jpg"
+const LISTS = {
+  speed: [
+    { name: "LaFerrari", img: PLACEHOLDER_IMG },
+    { name: "Ferrari 458 Italia GT2", img: PLACEHOLDER_IMG },
+    { name: "McLaren P1", img: PLACEHOLDER_IMG },
+    { name: "Porsche 918 Spyder", img: PLACEHOLDER_IMG },
+    { name: "Chevrolet Corvette Z06", img: PLACEHOLDER_IMG },
+    { name: "Ford Mustang GT", img: PLACEHOLDER_IMG },
+    { name: "Audi R18 e-tron quattro", img: PLACEHOLDER_IMG },
+    { name: "Audi R8 LMS ultra", img: PLACEHOLDER_IMG },
+    { name: "Chevrolet Camaro Drag Race", img: PLACEHOLDER_IMG },
+    { name: "Ford F-150 Raptor & Ford Model A Hot Rod", img: PLACEHOLDER_IMG },
+    { name: "Porsche 919 Hybrid & Porsche 917K Pit Lane", img: PLACEHOLDER_IMG },
+    { name: "Mercedes-AMG GT3", img: PLACEHOLDER_IMG },
+    { name: "Bugatti Chiron", img: PLACEHOLDER_IMG },
+    { name: "McLaren 720S", img: PLACEHOLDER_IMG },
+    { name: "2016 Ford GT & 1966 Ford GT40", img: PLACEHOLDER_IMG },
+    { name: "Ferrari FXX K & Development Center", img: PLACEHOLDER_IMG },
+    { name: "1968 Ford Mustang Fastback", img: PLACEHOLDER_IMG },
+    { name: "Ford Fiesta M-Sport WRC", img: PLACEHOLDER_IMG },
+    { name: "Ferrari 488 GT3 “Scuderia Corsa”", img: PLACEHOLDER_IMG },
+    { name: "James Bond Aston Martin DB5", img: PLACEHOLDER_IMG },
+    { name: "Dominic Toretto’s 1970 Dodge Charger R/T", img: PLACEHOLDER_IMG },
+    { name: "2 Fast 2 Furious Nissan Skyline GT-R (R34)", img: PLACEHOLDER_IMG },
+    { name: "Ferrari 812 Competizione", img: PLACEHOLDER_IMG },
+    { name: "Pagani Utopia", img: PLACEHOLDER_IMG },
+    { name: "Porsche 963", img: PLACEHOLDER_IMG },
+    { name: "McLaren Solus GT & McLaren F1 LM", img: PLACEHOLDER_IMG },
+    { name: "Ford Mustang Dark Horse", img: PLACEHOLDER_IMG },
+    { name: "Audi S1 e-tron quattro", img: PLACEHOLDER_IMG },
+    { name: "BMW M4 GT3 & BMW M Hybrid V8", img: PLACEHOLDER_IMG },
+    { name: "Lamborghini Lambo V12 Vision Gran Turismo", img: PLACEHOLDER_IMG },
+    { name: "Mercedes-AMG G 63 & Mercedes-AMG SL 63", img: PLACEHOLDER_IMG },
+  ],
+  f1: [
+    { name: "McLaren Mercedes Pit Stop (F1)", img: PLACEHOLDER_IMG },
+    { name: "Ferrari F14 T (F1)", img: PLACEHOLDER_IMG },
+    { name: "Scuderia Ferrari SF16-H (F1)", img: PLACEHOLDER_IMG },
+    { name: "Mercedes AMG Petronas Formula One Team (F1)", img: PLACEHOLDER_IMG },
+    { name: "2023 McLaren Formula 1 Car (F1)", img: PLACEHOLDER_IMG },
+    { name: "Ferrari SF-24 (F1)", img: PLACEHOLDER_IMG },
+    { name: "Oracle Red Bull Racing RB20 (F1)", img: PLACEHOLDER_IMG },
+    { name: "Mercedes-AMG PETRONAS W15 E Performance (F1)", img: PLACEHOLDER_IMG },
+    { name: "Aston Martin Aramco AMR24 (F1)", img: PLACEHOLDER_IMG },
+    { name: "Visa Cash App VCARB 01 (F1)", img: PLACEHOLDER_IMG },
+    { name: "KICK Sauber C44 (F1)", img: PLACEHOLDER_IMG },
+    { name: "BWT Alpine A524 (F1)", img: PLACEHOLDER_IMG },
+    { name: "Williams Racing FW46 (F1)", img: PLACEHOLDER_IMG },
+    { name: "MoneyGram Haas VF-24 (F1)", img: PLACEHOLDER_IMG },
+    { name: "McLaren F1 Team MCL38 (F1)", img: PLACEHOLDER_IMG },
+  ],
+};
 
-// ====== ELEMENTY UI ======
+// ====== UI ======
 const carList = document.getElementById("carList");
 const search = document.getElementById("search");
 const countOwned = document.getElementById("countOwned");
@@ -64,30 +64,34 @@ const countTotal = document.getElementById("countTotal");
 const barFill = document.getElementById("barFill");
 const btnAll = document.getElementById("btnAll");
 const btnNone = document.getElementById("btnNone");
+const tabSpeed = document.getElementById("tabSpeed");
+const tabF1 = document.getElementById("tabF1");
 
-// ====== STORAGE ======
-function loadState() {
+// ====== STAN ======
+let currentListKey = "speed";
+let cars = LISTS[currentListKey];
+let state = loadState(currentListKey);
+
+function storageKey(listKey) {
+  return `speed-champions-owned-${listKey}-v1`;
+}
+function loadState(listKey) {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : {};
+    return JSON.parse(localStorage.getItem(storageKey(listKey)) || "{}");
   } catch {
     return {};
   }
 }
-function saveState(state) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+function saveState(listKey, s) {
+  localStorage.setItem(storageKey(listKey), JSON.stringify(s));
 }
 
-let state = loadState();
-
-countTotal.textContent = String(cars.length);
-
-// ====== STATYSTYKI ======
+// ====== STATY ======
 function updateStats() {
-  const ownedCount = cars.reduce((acc, car) => acc + (state[car.name] ? 1 : 0), 0);
-  countOwned.textContent = String(ownedCount);
-
-  const pct = cars.length ? Math.round((ownedCount / cars.length) * 100) : 0;
+  const owned = cars.reduce((acc, c) => acc + (state[c.name] ? 1 : 0), 0);
+  countOwned.textContent = String(owned);
+  countTotal.textContent = String(cars.length);
+  const pct = cars.length ? Math.round((owned / cars.length) * 100) : 0;
   barFill.style.width = pct + "%";
 }
 
@@ -100,84 +104,70 @@ function makeCard(car) {
   img.src = car.img || PLACEHOLDER_IMG;
   img.alt = car.name;
   img.className = "car-img";
-
-  // jeśli plik nie istnieje, pokaż placeholder
-  img.onerror = () => {
-    if (img.src.includes(PLACEHOLDER_IMG)) return;
-    img.src = PLACEHOLDER_IMG;
-  };
-
-  const right = document.createElement("div");
-  right.style.display = "flex";
-  right.style.flexDirection = "column";
-  right.style.gap = "6px";
-  right.style.width = "100%";
-
-  const topRow = document.createElement("div");
-  topRow.style.display = "flex";
-  topRow.style.alignItems = "center";
-  topRow.style.gap = "10px";
+  img.onerror = () => (img.src = PLACEHOLDER_IMG);
 
   const cb = document.createElement("input");
   cb.type = "checkbox";
   cb.checked = !!state[car.name];
-
   cb.addEventListener("change", () => {
     state[car.name] = cb.checked;
-    saveState(state);
+    saveState(currentListKey, state);
     updateStats();
     card.classList.toggle("owned", cb.checked);
   });
 
   const label = document.createElement("label");
   label.textContent = car.name;
-  label.style.cursor = "pointer";
-
-  // kliknięcie na nazwę przełącza checkbox
   label.addEventListener("click", () => {
     cb.checked = !cb.checked;
     cb.dispatchEvent(new Event("change"));
   });
 
-  topRow.appendChild(cb);
-  topRow.appendChild(label);
-
-  right.appendChild(topRow);
   card.appendChild(img);
-  card.appendChild(right);
-
+  card.appendChild(cb);
+  card.appendChild(label);
   card.classList.toggle("owned", cb.checked);
-
   return card;
 }
 
-function render(filterText = "") {
-  const q = filterText.trim().toLowerCase();
+function render() {
+  const q = (search?.value || "").trim().toLowerCase();
   carList.innerHTML = "";
-
-  const filtered = cars.filter(car => car.name.toLowerCase().includes(q));
-
-  filtered.forEach(car => {
-    carList.appendChild(makeCard(car));
-  });
-
+  cars
+    .filter(c => c.name.toLowerCase().includes(q))
+    .forEach(c => carList.appendChild(makeCard(c)));
   updateStats();
 }
 
+// ====== PRZEŁĄCZANIE LIST ======
+function setActiveList(listKey) {
+  currentListKey = listKey;
+  cars = LISTS[currentListKey];
+  state = loadState(currentListKey);
+
+  tabSpeed?.classList.toggle("active", listKey === "speed");
+  tabF1?.classList.toggle("active", listKey === "f1");
+
+  render();
+}
+
+tabSpeed?.addEventListener("click", () => setActiveList("speed"));
+tabF1?.addEventListener("click", () => setActiveList("f1"));
+
 // ====== KONTROLKI ======
-search?.addEventListener("input", () => render(search.value));
+search?.addEventListener("input", render);
 
 btnAll?.addEventListener("click", () => {
-  cars.forEach(car => (state[car.name] = true));
-  saveState(state);
-  render(search.value);
+  cars.forEach(c => (state[c.name] = true));
+  saveState(currentListKey, state);
+  render();
 });
 
 btnNone?.addEventListener("click", () => {
-  cars.forEach(car => (state[car.name] = false));
-  saveState(state);
-  render(search.value);
+  cars.forEach(c => (state[c.name] = false));
+  saveState(currentListKey, state);
+  render();
 });
 
 // ====== START ======
-render();
+setActiveList("speed");
