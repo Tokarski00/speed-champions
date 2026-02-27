@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LEGO Speed Champions — moja kolekcja</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🚗 LEGO Speed Champions</h1>
+    <p>Zaznacz modele, które masz. Zapisuje się automatycznie.</p>
+
+    <div class="stats">
+      <span id="countOwned">0</span> / <span id="countTotal">0</span> posiadam
+      <div class="bar"><div id="barFill"></div></div>
+    </div>
+
+    <div class="controls">
+      <input id="search" type="search" placeholder="Szukaj (np. Ferrari, Porsche)..." />
+      <button id="btnAll">Zaznacz wszystko</button>
+      <button id="btnNone">Odznacz wszystko</button>
+    </div>
+  </header>
+
+  <main id="carList"></main>
+
+  <script src="script.js"></script>
+</body>
+</html>
