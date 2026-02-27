@@ -5,7 +5,7 @@ const PLACEHOLDER_IMG = "images/placeholder.jpg";
 // Jak wrzucisz zdjęcia do /images, podmieniasz img na np. "images/bugatti-chiron.jpg"
 const LISTS = {
   speed: [
-    { name: "LaFerrari", img: PLACEHOLDER_IMG },
+    { name: "LaFerrari", img: images/LaFerrari.jpg },
     { name: "Ferrari 458 Italia GT2", img: PLACEHOLDER_IMG },
     { name: "McLaren P1", img: PLACEHOLDER_IMG },
     { name: "Porsche 918 Spyder", img: PLACEHOLDER_IMG },
