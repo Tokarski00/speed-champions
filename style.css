@@ -41,3 +41,10 @@ main{ max-width:900px; margin:0 auto; display:grid; gap:10px; }
   object-fit: cover;
   border-radius: 10px;
 }
+
+.tabs{ display:flex; gap:10px; margin-top:12px; }
+.tab{
+  padding:10px 12px; border-radius:12px;
+  border:1px solid #2a2f45; background:#171922; color:#fff;
+}
+.tab.active{ outline:2px solid #6ee7ff; }
